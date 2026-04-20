@@ -1,9 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-   <url>
-      <loc>https://planeadorescondor.com.ar/</loc>
-      <lastmod>2026-04-20</lastmod>
-      <changefreq>weekly</changefreq>
-      <priority>1.0</priority>
-   </url>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://planeadorescondor.com.ar/</loc>
+    <lastmod>2026-04-20</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/aerea.jpg</image:loc>
+      <image:caption>Vista aérea del Club de Planeadores Cóndor</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/atardecer.jpg</image:loc>
+      <image:caption>Atardecer en la pista de aterrizaje del Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/bergfalke-2.jpg</image:loc>
+      <image:caption>Planeador Bergfalke biplaza en plataforma en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/bergfalke-3.jpg</image:loc>
+      <image:caption>Detalle del cockpit de un planeador Bergfalke en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/bergfalke-despegue.jpg</image:loc>
+      <image:caption>Despegue de planeador Bergfalke asistido por remolcador en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/bergfalke-tierra.jpg</image:loc>
+      <image:caption>Planeador Bergfalke descansando en el Club de Planeadores Cóndor de Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/hangar.jpg</image:loc>
+      <image:caption>Interior del hangar del Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/hero.png</image:loc>
+      <image:caption>Vuelo a vela sobre las nubes por el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/planeador-epm.jpg</image:loc>
+      <image:caption>Planeador modelo EPM listo para el vuelo en Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/planeadores-muchos-2.jpg</image:loc>
+      <image:caption>Línea de vuelo con múltiples planeadores en pista en Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/planeadores.jpg</image:loc>
+      <image:caption>Reunión de pilotos y planeadores en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/remolcador.jpg</image:loc>
+      <image:caption>Avión remolcador del Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/twin-astir.png</image:loc>
+      <image:caption>Planeador biplaza Twin Astir en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/twin-astir-1.jpg</image:loc>
+      <image:caption>Preparación para el vuelo en un Twin Astir en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://planeadorescondor.com.ar/images/twin-volando.jpg</image:loc>
+      <image:caption>Planeador Twin Astir realizando vuelo térmico en el Club de Planeadores Cóndor en Zárate</image:caption>
+    </image:image>
+  </url>
 </urlset>
