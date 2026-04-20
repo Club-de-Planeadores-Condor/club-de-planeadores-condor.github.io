@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Club de Planeadores Cóndor | Bautismos y Curso de Piloto en Zárate</title>
+    <meta name="description" content="Viví la experiencia de un vuelo de bautismo en el aeródromo de Zárate. Escuela de vuelo y curso de piloto de planeador.">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <style>
+        :root {
+            --condor-blue: #1a4a8e;
+            --condor-red: #d32f2f;
+            --sky-light: #e3f2fd;
+            --white: #ffffff;
+            --text-dark: #212121;
+            --whatsapp-green: #25D366;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
+            line-height: 1.6; 
+            color: var(--text-dark);
+            background-color: #f8f9fa;
+        }
+
+        header {
+            background: var(--white);
+            padding: 1.5rem;
+            display: flex;
+            justify-content: center;
+            border-bottom: 3px solid var(--condor-blue);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .logo { max-height: 140px; width: auto; }
+
+        .hero {
+            background: linear-gradient(rgba(26, 74, 142, 0.7), rgba(26, 74, 142, 0.7)), 
+                        url('images/aerea.jpg'); 
+            background-size: cover;
+            background-position: center;
+            color: var(--white);
+            padding: 7rem 1.5rem;
+            text-align: center;
+        }
+        .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
+        section { margin-bottom: 4rem; }
+        h3 { color: var(--condor-blue); font-size: 2rem; margin-bottom: 1.5rem; border-left: 5px solid var(--condor-red); padding-left: 15px; }
+
+        .grid { display: flex; flex-direction: column; gap: 2.5rem; }
+        
+        .img-box { 
+            width: 100%; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .img-box img { width: 100%; height: auto; display: block; object-fit: cover; }
+        .img-limit { max-height: 450px; }
+
+        /* Slider */
+        .slider-container {
+            width: 100%;
+            height: 450px;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            background: #000;
+        }
+        #dynamic-slider { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease-in-out; opacity: 0; }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--whatsapp-green);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
+
+        /* WhatsApp Flotante Fijo */
+        .wsp-float {
+            position: fixed;
+            width: 65px;
+            height: 65px;
+            bottom: 25px;
+            right: 25px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 35px;
+            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
+            z-index: 2000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .feature-card { background: var(--sky-light); padding: 2rem; border-radius: 12px; border-top: 5px solid var(--condor-blue); }
+
+        .map-container { width: 100%; height: 400px; border-radius: 12px; overflow: hidden; }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
+        .social-links { display: flex; justify-content: center; margin-top: 1rem; }
+        .social-links a { font-size: 3.5rem; color: var(--condor-blue); transition: color 0.3s; }
+        .social-links a:hover { color: var(--condor-red); }
+
+        footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 1rem; }
+
+        @media (min-width: 768px) {
+            .grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
+            .hero h2 { font-size: 3.8rem; }
+            .logo { max-height: 180px; }
+            .slider-container { height: 600px; }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="https://wa.me/5491141930626" class="wsp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <header>
+        <img src="images/logo.png" alt="Logo Club de Planeadores Cóndor" class="logo">
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Vuelos de Bautismo</h2>
+            <p style="font-size: 1.6rem; margin-bottom: 2rem;">En el Aeródromo de Zárate.</p>
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Sentí la libertad del vuelo sin motor.</p>
+            <a href="https://wa.me/5491141930626?text=Hola,%20quiero%20consultar%20por%20un%20vuelo%20de%20bautismo" class="btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Reservar por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <main class="container">
+        
+        <section class="grid">
+            <div class="text-content">
+                <h3>Bautismos de Vuelo</h3>
+                <p>Volamos en el <strong>Twin Astir</strong>, un planeador biplaza alemán de alto rendimiento, reconocido mundialmente por su robustez y excelente planeo.</p>
+                <br>
+                <p>Viví la experiencia de un vuelo sin motor en el <strong>Aeródromo de Zárate</strong> los fines de semana.</p>
+                <br>
+                <ul style="list-style: none; padding-left: 0;">
+                    <li>📍 <strong>Dirección:</strong> Av. Antártida Argentina 6600 y Ruta 9, Zárate.</li>
+                    <li>🕒 <strong>Referencia:</strong> KM 88.5 de Panamericana.</li>
+                </ul>
+            </div>
+            <div class="img-box">
+                <img src="images/twin-volando.jpg" alt="Twin Astir volando" class="img-limit">
+            </div>
+        </section>
+
+        <section>
+            <h3>Nuestra Flota y Club</h3>
+            <div class="slider-container">
+                <img id="dynamic-slider" src="" alt="Galería Club">
+            </div>
+        </section>
+
+        <section>
+            <h3>Curso de Piloto de Planeador</h3>
+            <div class="grid">
+                <div class="feature-card">
+                    <h4>Escuela de Vuelo</h4>
+                    <p>Damos los vuelos de instrucción con un <strong>Bergfalke</strong> y un <strong>Twin Astir</strong>, cubriendo todas las etapas de aprendizaje.</p>
+                    <br>
+                    <p><strong>¡Empezá tu carrera aeronáutica hoy mismo!</strong></p>
+                    <ul style="margin: 15px 0 20px 20px;">
+                        <li>Instructores calificados.</li>
+                        <li>Certificado Psicofísico Clase II requerido.</li>
+                        <li>Edad mínima: 16 años.</li>
+                    </ul>
+                    <a href="https://wa.me/5491141930626?text=Hola,%20quisiera%20información%20sobre%20el%20curso%20de%20piloto" class="btn-whatsapp">
+                        <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Info del Curso
+                    </a>
+                </div>
+                <div class="img-box">
+                    <img src="images/bergfalke-tierra.jpg" alt="Bergfalke">
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h3>Ubicación</h3>
+            <p style="margin-bottom: 1rem;">Av. Antártida Argentina 6600 y Ruta Nacional N° 9, Zárate.</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d13197.669862283944!2d-59.0609!3d-34.1287!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzTCsDA3JzQzLjMiUyA1OcKwMDMnMzkuMiJX!5e0!3m2!1ses!2sar!4v1713600000000!5m2!1ses!2sar7" loading="lazy"></iframe>
+            </div>
+        </section>
+
+        <section style="text-align: center;">
+            <h3>Seguinos en redes sociales</h3>
+            <div class="social-links">
+                <a href="https://www.instagram.com/clubdeplaneadorescondor/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p><strong>Club de Planeadores Cóndor</strong><br>Zárate, Provincia de Buenos Aires, Argentina</p>
+    </footer>
+
+    <script>
+        async function initSlider() {
+            const sliderImg = document.getElementById('dynamic-slider');
+            try {
+                const response = await fetch('images/inventory.json');
+                let files = await response.json();
+                
+                // Forzar que 'planeadores-muchos.jpg' sea la primera si existe
+                const firstImg = 'planeadores-muchos.jpg';
+                if (files.includes(firstImg)) {
+                    files = [firstImg, ...files.filter(f => f !== firstImg)];
+                }
+
+                let index = 0;
+                const rotate = () => {
+                    sliderImg.style.opacity = 0;
+                    setTimeout(() => {
+                        sliderImg.src = `images/${files[index]}`;
+                        sliderImg.onload = () => { sliderImg.style.opacity = 1; };
+                        index = (index + 1) % files.length;
+                    }, 800);
+                };
+                rotate();
+                setInterval(rotate, 4500);
+            } catch (e) {
+                sliderImg.src = 'images/planeadores-muchos.jpg';
+                sliderImg.style.opacity = 1;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', initSlider);
+    </script>
+
+</body>
+</html>
