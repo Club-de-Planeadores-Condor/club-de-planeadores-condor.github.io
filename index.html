@@ -5,25 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Club de Planeadores Cóndor | Bautismos de Vuelo y Curso de Piloto en Zárate, Buenos Aires</title>
-    <meta name="description" content="Viví la experiencia de un vuelo de bautismo en el aeródromo de Zárate, Buenos Aires. Escuela de vuelo y curso de piloto de planeador.">
+    <title>Club de Planeadores Cóndor | Historia, Escuela de Vuelo y Vuelos de Bautismo en Zárate</title>
+    <meta name="description" content="Asociación Civil sin fines de lucro fundada en 1934. Escuela de vuelo a vela, vuelos de bautismo e instrucción aeronáutica en Zárate, Buenos Aires.">
     <link rel="canonical" href="https://planeadorescondor.com.ar/">
     <meta name="robots" content="index, follow">
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Club de Planeadores Cóndor | Zárate, Buenos Aires">
-    <meta property="og:description" content="Sentí la libertad del vuelo sin motor. Reservá tu vuelo de bautismo o empezá el curso de piloto.">
+    <meta property="og:description" content="Sentí la libertad del vuelo sin motor. Escuela de piloto y vuelos de bautismo en Zárate.">
     <meta property="og:image" content="https://planeadorescondor.com.ar/images/twin-astir-1.jpg">
     <meta property="og:url" content="https://planeadorescondor.com.ar/">
-
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Club de Planeadores Cóndor | Zárate, Buenos Aires">
-    <meta name="twitter:description" content="Vuelos de bautismo y cursos de piloto de planeador en Zárate, Buenos Aires.">
-    <meta name="twitter:image" content="https://planeadorescondor.com.ar/images/twin-astir-1.jpg">
 
     <meta name="theme-color" content="#1a4a8e">
     <link rel="apple-touch-icon" href="images/logo-180x180.png">
     <link rel="icon" type="image/png" sizes="32x32" href="images/logo-32x32.png">
+
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" media="print" onload="this.media='all'">
 
     <script type="application/ld+json">
     {
@@ -53,20 +51,25 @@
       }
     }
     </script>
-    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <style>
         :root {
             --condor-blue: #1a4a8e;
-            --condor-red: #d32f2f;
-            --sky-light: #e3f2fd;
+            --condor-dark: #0d284f;
+            --condor-green: #2e7d32;
+            --condor-red: #EE4B2B;
+            --sky-light: #f0f7ff;
             --white: #ffffff;
             --text-dark: #212121;
             --whatsapp-green: #25D366;
         }
 
+        main p {
+          text-align: justify;
+        }
+
         * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
             line-height: 1.6; 
@@ -74,33 +77,95 @@
             background-color: #f8f9fa;
         }
 
+        .badge-bar {
+            background: linear-gradient(135deg, var(--condor-dark), var(--condor-blue));
+            color: var(--white);
+            text-align: center;
+            padding: 18px 15px;
+            border-bottom: 3px solid var(--condor-green);
+        }
+        .badge-bar h2 {
+            font-size: 1.6rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+        }
+        .badge-bar p {
+            font-size: 1rem;
+            margin-top: 4px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
         header {
             background: var(--white);
-            padding: 1.5rem;
+            padding: 1.5rem 1rem 1rem 1rem;
             display: flex;
-            justify-content: center;
-            border-bottom: 3px solid var(--condor-blue);
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 2px solid #e0e0e0;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
         }
-        .logo { max-height: 140px; width: auto; }
+        .logo-container {
+            text-align: center;
+            margin-bottom: 0.8rem;
+        }
+        .logo { 
+            max-height: 180px; 
+            width: auto; 
+            display: block;
+            margin: 0 auto;
+            transition: transform 0.3s ease;
+        }
+        .logo:hover { transform: scale(1.02); }
+
+        nav {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            margin-top: 10px;
+        }
+        nav a {
+            color: var(--condor-blue);
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 0.95rem;
+            padding: 0.4rem 0.8rem;
+            border-radius: 6px;
+            transition: all 0.2s ease;
+        }
+        nav a:hover {
+            background-color: var(--sky-light);
+            color: var(--condor-green);
+        }
 
         .hero {
-            background: linear-gradient(rgba(26, 74, 142, 0.7), rgba(26, 74, 142, 0.7)), 
+            background: linear-gradient(rgba(13, 40, 79, 0.75), rgba(13, 40, 79, 0.75)), 
                         url('images/aerea.jpg'); 
             background-size: cover;
             background-position: center;
             color: var(--white);
-            padding: 7rem 1.5rem;
+            padding: 5rem 1.5rem;
             text-align: center;
         }
-        .hero h1 { font-size: 4rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
-        .hero h2 { font-size: 2.8rem; margin-bottom: 1rem; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .hero h1 { font-size: 3.2rem; margin-bottom: 1rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); }
+        .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
 
-        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 2rem 1.5rem; }
-        section { margin-bottom: 4rem; }
-        h3 { color: var(--condor-blue); font-size: 2rem; margin-bottom: 1.5rem; border-left: 5px solid var(--condor-red); padding-left: 15px; }
+        .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
+        section { margin-bottom: 4rem; scroll-margin-top: 250px; }
+        
+        h3 { 
+            color: var(--condor-blue); 
+            font-size: 2.1rem; 
+            margin-bottom: 1.5rem; 
+            border-left: 6px solid var(--condor-green); 
+            padding-left: 15px; 
+        }
 
         .grid { display: flex; flex-direction: column; gap: 2.5rem; }
         
@@ -108,12 +173,11 @@
             width: 100%; 
             border-radius: 12px; 
             overflow: hidden; 
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
         }
         .img-box img { width: 100%; height: auto; display: block; object-fit: cover; }
         .img-limit { max-height: 450px; }
 
-        /* Slider */
         .slider-container {
             width: 100%;
             height: 450px;
@@ -125,7 +189,7 @@
         }
         #dynamic-slider { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease-in-out; opacity: 0; }
 
-        .btn-whatsapp {
+        .btn-cta {
             display: inline-flex;
             align-items: center;
             justify-content: center;
@@ -135,11 +199,55 @@
             border-radius: 50px;
             text-decoration: none;
             font-weight: bold;
-            transition: 0.3s;
+            font-size: 1.05rem;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
+            transition: all 0.3s ease;
         }
-        .btn-whatsapp:hover { transform: scale(1.05); box-shadow: 0 5px 15px rgba(37, 211, 102, 0.4); }
+        .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45); }
+        .btn-blue { background: var(--condor-blue); box-shadow: 0 4px 12px rgba(26, 74, 142, 0.3); }
+        .btn-blue:hover { background: var(--condor-dark); }
 
-        /* WhatsApp Flotante Fijo */
+        .cta-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .action-card {
+            background: var(--sky-light);
+            border: 2px solid #bce0fd;
+            border-radius: 12px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .action-card h4 { color: var(--condor-blue); font-size: 1.4rem; margin-bottom: 0.8rem; }
+
+        .fleet-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 2rem;
+        }
+        .fleet-category {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            border-top: 5px solid var(--condor-blue);
+        }
+        .fleet-list { list-style: none; margin-top: 1rem; }
+        .fleet-list li {
+            padding: 0.8rem 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+        .fleet-list li i { color: var(--condor-green); margin-right: 12px; }
+
+        .map-container { width: 100%; height: 420px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .map-container iframe { width: 100%; height: 100%; border: 0; }
+
         .wsp-float {
             position: fixed;
             width: 65px;
@@ -150,7 +258,7 @@
             color: #FFF;
             border-radius: 50px;
             text-align: center;
-            font-size: 35px;
+            font-size: 36px;
             box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
             z-index: 2000;
             display: flex;
@@ -159,22 +267,15 @@
             text-decoration: none;
         }
 
-        .feature-card { background: var(--sky-light); padding: 2rem; border-radius: 12px; border-top: 5px solid var(--condor-blue); }
-
-        .map-container { width: 100%; height: 400px; border-radius: 12px; overflow: hidden; }
-        .map-container iframe { width: 100%; height: 100%; border: 0; }
-
-        .social-links { display: flex; justify-content: center; margin-top: 1rem; }
-        .social-links a { font-size: 3.5rem; color: var(--condor-blue); transition: color 0.3s; }
-        .social-links a:hover { color: var(--condor-red); }
-
-        footer { background: #1a1a1a; color: #ccc; text-align: center; padding: 3rem 1rem; }
+        footer { background: #111; color: #aaa; text-align: center; padding: 3rem 1rem; }
+        footer p { margin-bottom: 0.5rem; }
 
         @media (min-width: 768px) {
             .grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
-            .hero h2 { font-size: 3.8rem; }
-            .logo { max-height: 180px; }
-            .slider-container { height: 600px; }
+            .fleet-container { grid-template-columns: 1fr 1fr; }
+            .cta-grid { grid-template-columns: 1fr 1fr 1fr; }
+            .hero h1 { font-size: 4rem; }
+            .slider-container { height: 550px; }
         }
     </style>
 </head>
@@ -185,119 +286,199 @@
     </a>
 
     <header>
-        <img src="images/logo.png" alt="Logo Club de Planeadores Cóndor" class="logo">
+        <div class="logo-container">
+            <a href="#inicio">
+                <img src="images/logo.png" alt="Club de Planeadores Cóndor" class="logo">
+            </a>
+        </div>
+        <div class="badge-bar" style="width: 100%; z-index: 1001;">
+            <h2>92 Años de Trayectoria (1934 - 2026)</h2>
+            <p>Una de las instituciones decanas del vuelo a vela en la República Argentina.</p>
+        </div>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#nosotros">Quienes Somos</a>
+            <a href="#historia">Historia</a>
+            <a href="#bautismos">Bautismos</a>
+            <a href="#escuela">Escuela de Vuelo</a>
+            <a href="#flota">Nuestra Flota</a>
+            <a href="#ubicacion">Ubicación</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
     </header>
 
-    <div style="background-color: #003366; color: white; text-align: center; padding: 15px 0; border-bottom: 4px solid #003366;">
-        <h2 style="margin: 0; font-size: 1.4rem; letter-spacing: 1px; text-transform: uppercase;">
-            92 Años de Trayectoria (1934 - 2026)
-        </h2>
-        <p style="margin: 5px 0 0; font-style: italic; opacity: 0.9;">
-            Uno de los clubes de planeadores con más historia del país.
-        </p>
-    </div>
-
-    <section class="hero">
-        <div class="container">
-            <h1>Vuelos de Bautismo en Planeador</h1>
-            <h2 style="font-size: 1.6rem; margin-bottom: 1rem;">En el Aeródromo de Zárate, Provincia de Buenos Aires.</h2>
-            <h2 style="font-size: 1.1rem; margin-bottom: 1rem;">A 1 hora de la Capital Federal.</h2>
-            <p style="font-size: 1.2rem; margin-bottom: 2rem;">Sentí la libertad del vuelo sin motor.</p>
-            <a href="https://wa.me/5491130929058?text=Hola,%20quiero%20consultar%20por%20el%20precio%20del%20vuelo%20de%20bautismo"
-               class="btn-whatsapp"
-               target="_blank"
-               title="Consultar precio de vuelo en planeador en Zárate">
-                <h3 style="margin: 0; font-size: 1.1rem; color: white; border: none; padding: 0;">
-                    Consultar Precio de Bautismo
-                </h3>
+    <section id="inicio" class="hero">
+        <div class="container" style="padding:0;">
+            <h1>Vuelos de Bautismo y Escuela de Pilotaje</h1>
+            <p>Descubrí el vuelo sin motor en el Aeródromo de Zárate, Provincia de Buenos Aires. Formando pilotos e impulsando el vuelo a vela desde 1934.</p>
+            <a href="https://wa.me/5491130929058?text=Hola,%20quiero%20reservar%20mi%20vuelo%20y%20apoyar%20la%20aviación%20civil" class="btn-cta" target="_blank">
+                <i class="fab fa-whatsapp" style="margin-right: 10px;"></i> Reservá tu Vuelo y Apoyá al Club
             </a>
         </div>
     </section>
 
     <main class="container">
-        
-        <section class="grid">
-            <div class="text-content">
-                <h3>Bautismos de Vuelo</h3>
-                <p>Volamos en el <strong>Twin Astir</strong>, un planeador biplaza alemán de alto rendimiento, reconocido mundialmente por su robustez y excelente planeo.</p>
-                <br>
-                <p>Viví la experiencia de un vuelo sin motor en el <strong>Aeródromo de Zárate</strong> los fines de semana.</p>
-                <br>
 
-                <div style="background: var(--white); padding: 1.5rem; border-radius: 12px; border: 2px dashed var(--condor-blue); margin-bottom: 2rem;">
-                  <h4 style="color: var(--condor-red); margin-bottom: 0.5rem;">🎁 Regalá una experiencia única</h4>
-              
-                  <p style="font-size: 0.95rem; margin-bottom: 1rem;">¿Buscás un regalo original en Buenos Aires?</p>
-              
-                  <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20regalar%20un%20bautismo%20en%20planeador"
-                     class="btn-whatsapp"
-                     style="padding: 0.8rem 1.5rem; font-size: 1rem; display: flex; flex-direction: column; align-items: center; text-align: center;"
-                     title="Regalar bautismo en planeador - Experiencias Buenos Aires">
-              
-                      <span style="font-weight: normal; font-size: 0.85rem; display: block; margin-bottom: 4px;">Hacé un regalo inolvidable:</span>
-              
-                      <h3 style="margin: 0; font-size: 1.1rem; color: white; border: none; padding: 0;">
-                          Regalar Bautismo de Planeador en Buenos Aires
-                      </h3>
-                  </a>
+        <section id="nosotros">
+            <h3>Quienes Somos</h3>
+            <div class="grid">
+                <div class="text-content">
+                    <p>El <strong>Club de Planeadores Cóndor</strong> es una Asociación Civil sin fines de lucro dedicada a promover el fomento de la aviación deportiva, la instrucción aeronáutica y la formación de pilotos de planeador en la Argentina.</p>
+                    <br>
+                    <p>Nuestra labor abarca desde la difusión comunitaria a través de vuelos de bautismo, hasta el entrenamiento técnico avanzado y participación en competencias nacionales organizadas por la <strong>Federación Argentina de Vuelo a Vela (FAVAV)</strong>.</p>
+                </div>
+                <div class="img-box">
+                    <img src="images/twin-astir-1.jpg" alt="Planeador Twin Astir en vuelo" loading="lazy">
+                </div>
+            </div>
+
+            <section id="compromiso" style="margin: 2rem auto; max-width: 900px;">
+    <div style="padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 2px solid var(--condor-green); box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15); text-align: center;">
+        <h3 style="color: var(--condor-green); margin-bottom: 1rem; border: none; padding: 0;">Tu vuelo tiene un propósito social</h3>
+        <p style="font-size: 1.1rem; color: #333; line-height: 1.7; text-align: center;">
+            El <strong>Club de Planeadores Cóndor</strong> es una asociación sin fines de lucro.
+            Al realizar un bautismo de vuelo con nosotros, <strong>no solo vivís una experiencia increíble: estás contribuyendo directamente</strong> con el mantenimiento de nuestra flota, la seguridad operativa y la formación de nuevos pilotos en nuestra región.
+        </p>
+        <div style="margin-top: 1.5rem; font-weight: bold; color: var(--condor-blue);">
+            <i class="fas fa-check-circle"></i> 100% de los fondos se reinvierten en la institución.
+        </div>
+    </div>
+</section>
+
+            <div class="cta-grid">
+                <div class="action-card">
+                    <i class="fas fa-plane-departure" style="font-size: 2.5rem; color: var(--condor-blue); margin-bottom: 1rem;"></i>
+                    <h4>Vuelos de Bautismo</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Viví la experiencia de volar sin motor junto a nuestros pilotos.</p>
+                    <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20consultar%20por%20un%20vuelo%20de%20bautismo" class="btn-cta" target="_blank">Consultar Horarios</a>
+                </div>
+
+                <div class="action-card">
+                    <i class="fas fa-graduation-cap" style="font-size: 2.5rem; color: var(--condor-blue); margin-bottom: 1rem;"></i>
+                    <h4>Escuela de Vuelo</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Iniciá tu carrera aeronáutica y obtené tu licencia de piloto.</p>
+                    <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20información%20para%20iniciar%20el%20curso%20de%20piloto" class="btn-cta btn-blue" target="_blank">Requisitos de Ingreso</a>
+                </div>
+
+                <div class="action-card">
+                    <i class="fas fa-users" style="font-size: 2.5rem; color: var(--condor-blue); margin-bottom: 1rem;"></i>
+                    <h4>Asociate al Club</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Sumate a nuestra comunidad deportiva y volá en nuestra flota.</p>
+                    <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20asociarme%20al%20Club%20de%20Planeadores%20Cóndor" class="btn-cta btn-blue" target="_blank">Hacete Socio</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="historia">
+            <h3>Nuestra Historia</h3>
+            <div style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--condor-green);">
+                <p>El <strong>Club de Planeadores Cóndor</strong> fue fundado formalmente el <strong>3 de diciembre de 1934</strong> en Comodoro Rivadavia (Chubut) por empleados de las empresas petroleras de la zona. Sus antecedentes se remontan a 1931, cuando entusiastas apoyados por los pilotos de la célebre <em>Aeroposta Argentina</em> armaron un planeador Kassel 12 para experimentar los vuelos sin motor en la Patagonia. Durante esa etapa, pioneros célebres como <strong>Antoine de Saint-Exupéry</strong>, Jean Mermoz y Próspero Palazzo desafiaron los vientos patagónicos en planeador.</p>
+                <br>
+                <p>A fines de la década del 30', el club se trasladó a Buenos Aires, operando inicialmente en José León Suárez y luego en el Aeródromo de Merlo desde 1949. Finalmente, en 1974, la institución se radicó de forma definitiva en el <strong>Aeródromo de Zárate</strong>, inaugurando en 1976 su hangar propio.</p>
+                <br>
+                <p>Por nuestra Escuela de Vuelo pasaron más de 15 instructores destacados, entre ellos <strong>Rolf Hossinger</strong> (histórico Comandante de Aerolíneas Argentinas y Campeón Mundial de Vuelo a Vela en 1960). Hoy en día, el club continúa formando pilotos comerciales, deportivos y remolcadores que alimentan el sistema aeronáutico argentino.</p>
+            </div>
+        </section>
+
+        <section id="bautismos" class="grid">
+            <div class="text-content">
+                <h3>Vuelos de Bautismo</h3>
+                <p>Volamos en el <strong>Twin Astir</strong>, un planeador biplaza alemán de alto rendimiento, mundialmente reconocido por su robustez y excelente planeo.</p>
+                <br>
+                <p>Realizamos vuelos de bautismo los fines de semana y feriados. Viví la sensación única de volar silenciosamente impulsado por las corrientes ascendentes.</p>
+                <br>
+                
+                <div style="background: var(--sky-light); padding: 1.5rem; border-radius: 12px; border: 2px dashed var(--condor-green);">
+                    <h4 style="color: var(--condor-red); margin-bottom: 0.5rem;"><i class="fas fa-gift"></i> Regalá una Experiencia Única</h4>
+                    <p style="font-size: 0.95rem; margin-bottom: 1rem;">¿Buscás un regalo original en Buenos Aires? Ofrecemos vouchers de regalo para bautismos de vuelo.</p>
+                    <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20regalar%20un%20bautismo%20en%20planeador" class="btn-cta" target="_blank">Regalar Voucher de Vuelo</a>
                 </div>
             </div>
             <div class="img-box">
-                <img src="images/twin-astir-1.jpg" alt="Twin Astir" class="img-limit">
+                <img src="images/twin-astir-1.jpg" alt="Twin Astir en Zárate" class="img-limit" loading="lazy">
             </div>
         </section>
 
         <section>
-            <h3>Nuestra Flota y Club</h3>
+            <h3>Galería e Instalaciones</h3>
+            <p style="margin-bottom: 1rem;">Imágenes de la actividad cotidiana en el Aeródromo de Zárate:</p>
             <div class="slider-container">
-                <img id="dynamic-slider" src="" alt="Club Planeadores Cóndor - Zárate, Provincia de Buenos Aires - Bautismos Planeador - Curso Piloto Planeador">
+                <img id="dynamic-slider" src="images/planeadores-muchos.jpg" alt="Flota de planeadores del Club de Planeadores Cóndor">
             </div>
         </section>
 
-        <section>
+        <section id="escuela">
             <h3>Curso de Piloto de Planeador</h3>
             <div class="grid">
-                <div class="feature-card">
-                    <h4>Escuela de Vuelo</h4>
-                    <p>Damos los vuelos de instrucción con un <strong>Bergfalke</strong> y un <strong>Twin Astir</strong>, cubriendo todas las etapas de aprendizaje.</p>
+                <div class="text-content">
+                    <p>Nuestra Escuela de Vuelo dicta la instrucción teórica y práctica bajo reglamentación ANAC para obtener la Licencia de Piloto de Planeador.</p>
                     <br>
-                    <p><strong>¡Empezá tu carrera aeronáutica hoy mismo!</strong></p>
-                    <ul style="margin: 15px 0 20px 20px;">
-                        <li>Instructores calificados.</li>
-                        <li>Certificado Psicofísico Clase II requerido.</li>
-                        <li>Edad mínima: 16 años.</li>
+                    <p>Contamos con aeronaves biplazas de instrucción como el <strong>Bergfalke III</strong> y el <strong>Twin Astir</strong>, acompañados por instructores capacitados con amplia trayectoria.</p>
+                    <br>
+                    <ul style="padding-left: 20px; margin-bottom: 1.5rem;">
+                        <li><strong>Edad mínima:</strong> 16 años (con autorización legal).</li>
+                        <li><strong>Aptitud médica:</strong> Certificado Psicofísico Clase II.</li>
+                        <li><strong>Actividad:</strong> Fines de semana y feriados.</li>
                     </ul>
-                    <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20información%20sobre%20el%20curso%20de%20piloto" class="btn-whatsapp">
-                        <h3 style="margin: 0; font-size: 1.1rem; color: white; border: none; padding: 0;">
-                            Consultar Precio de Curso de Piloto de Planeador
-                        </h3>
-                    </a>
+                    <a href="https://wa.me/5491130929058?text=Hola,%20quisiera%20más%20información%20sobre%20el%20curso%20de%20piloto" class="btn-cta" target="_blank">Solicitar Información del Curso</a>
                 </div>
                 <div class="img-box">
-                    <img src="images/bergfalke-tierra.jpg" alt="Bergfalke de instrucción">
+                    <img src="images/bergfalke-tierra.jpg" alt="Bergfalke de instrucción" loading="lazy">
                 </div>
             </div>
         </section>
 
-        <section>
-            <h3>Ubicación</h3>
-            <p style="margin-bottom: 1rem;">Av. Antártida Argentina 6600 y Ruta Nacional N° 9, Zárate, Provincia de Buenos Aires.</p>
-            <div class="map-container">
-              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.931066891816!2d-59.08503658947775!3d-34.12251443213133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0ab80dde1ee9%3A0x89ad27ab707fe3de!2sClub%20de%20Planeadores%20Condor!5e0!3m2!1ses!2sar!4v1776705987458!5m2!1ses!2sar" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <section id="flota">
+            <h3>Nuestra Flota de Aeronaves</h3>
+            <p style="margin-bottom: 1.5rem;">El Club de Planeadores Cóndor dispone de material de vuelo para la instrucción, entrenamiento y competición de sus socios:</p>
+            
+            <div class="fleet-container">
+                <div class="fleet-category">
+                    <h4 style="color: var(--condor-blue); font-size: 1.3rem;"><i class="fas fa-paper-plane"></i> Planeadores</h4>
+                    <ul class="fleet-list">
+                        <li><i class="fas fa-check-circle"></i> Grob G-103 Twin Astir (Biplaza de alta performance)</li>
+                        <li><i class="fas fa-check-circle"></i> Scheibe Bergfalke III (Biplaza de escuela)</li>
+                        <li><i class="fas fa-check-circle"></i> Schleicher Ka 6CR</li>
+                        <li><i class="fas fa-check-circle"></i> Schleicher K 6E</li>
+                        <li><i class="fas fa-check-circle"></i> Politechnika Warszawska PW-5 Smyk</li>
+                        <li><i class="fas fa-check-circle"></i> Schempp-Hirth Cirrus Standard</li>
+                        <li><i class="fas fa-check-circle"></i> Schempp-Hirth Mini Nimbus</li>
+                        <li><i class="fas fa-check-circle"></i> Schempp-Hirth Nimbus II</li>
+                    </ul>
+                </div>
+
+                <div class="fleet-category">
+                    <h4 style="color: var(--condor-blue); font-size: 1.3rem;"><i class="fas fa-plane"></i> Aviones Remolcadores</h4>
+                    <p style="margin-top: 0.5rem; font-size: 0.95rem; color: #555;">Nuestros aviones no sólo remolcan planeadores, sino que permiten a los pilotos acumular horas de experiencia en vuelo:</p>
+                    <ul class="fleet-list">
+                        <li><i class="fas fa-check-circle"></i> IA-46 Super Raquel</li>
+                        <li><i class="fas fa-check-circle"></i> AB-180 Boero</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section style="text-align: center;">
-            <h3>Seguinos en redes sociales</h3>
-            <div class="social-links">
-                <a href="https://www.instagram.com/clubdeplaneadorescondor/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <section id="ubicacion">
+            <h3>Ubicación</h3>
+            <p style="margin-bottom: 1rem;"><i class="fas fa-map-marker-alt" style="color: var(--condor-green);"></i> <strong>Aeródromo de Zárate:</strong> Av. Antártida Argentina 6600 y Ruta Nacional N° 9, Zárate, Provincia de Buenos Aires (A 1 hora de CABA).</p>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3302.931066891816!2d-59.08503658947775!3d-34.12251443213133!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bb0ab80dde1ee9%3A0x89ad27ab707fe3de!2sClub%20de%20Planeadores%20Condor!5e0!3m2!1ses!2sar!4v1776705987458!5m2!1ses!2sar" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Mapa de ubicación Aeródromo Zárate"></iframe>
             </div>
+        </section>
+
+        <section id="contacto" style="text-align: center;">
+            <h3>Contacto y Redes Sociales</h3>
+            <p style="margin-bottom: 1.5rem;">Seguinos para enterarte de los días de vuelo y novedades institucionales:</p>
+            <a href="https://www.instagram.com/clubdeplaneadorescondor/" target="_blank" style="font-size: 3.5rem; color: var(--condor-blue);" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
         </section>
 
     </main>
 
     <footer>
-        <p><strong>Club de Planeadores Cóndor</strong><br>Zárate, Provincia de Buenos Aires, Argentina</p>
+        <p><strong>Club de Planeadores Cóndor</strong> — Asociación Civil sin Fines de Lucro</p>
+        <p>Aeródromo de Zárate, Provincia de Buenos Aires, Argentina</p>
     </footer>
 
     <script>
@@ -305,6 +486,7 @@
             const sliderImg = document.getElementById('dynamic-slider');
             try {
                 const response = await fetch('images/inventory.json');
+                if (!response.ok) throw new Error("Inventory not found");
                 let files = await response.json();
                 
                 const firstImg = 'planeadores-muchos.jpg';
@@ -319,12 +501,11 @@
                         sliderImg.src = `images/${files[index]}`;
                         sliderImg.onload = () => { sliderImg.style.opacity = 1; };
                         index = (index + 1) % files.length;
-                    }, 800);
+                    }, 600);
                 };
                 rotate();
                 setInterval(rotate, 4500);
             } catch (e) {
-                // Fallback si no hay inventory.json
                 sliderImg.src = 'images/planeadores-muchos.jpg';
                 sliderImg.style.opacity = 1;
             }
