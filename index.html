@@ -64,211 +64,73 @@
             --whatsapp-green: #25D366;
         }
 
-        main p {
-          text-align: justify;
-        }
-
+        main p { text-align: justify; }
         * { box-sizing: border-box; margin: 0; padding: 0; }
         html { scroll-behavior: smooth; }
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; 
-            line-height: 1.6; 
-            color: var(--text-dark);
-            background-color: #f8f9fa;
-        }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; line-height: 1.6; color: var(--text-dark); background-color: #f8f9fa; }
 
-        .badge-bar {
-            background: linear-gradient(135deg, var(--condor-dark), var(--condor-blue));
-            color: var(--white);
-            text-align: center;
-            padding: 18px 15px;
-            border-bottom: 3px solid var(--condor-green);
-        }
-        .badge-bar h2 {
-            font-size: 1.6rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            font-weight: 800;
-        }
-        .badge-bar p {
-            font-size: 1rem;
-            margin-top: 4px;
-            opacity: 0.9;
-            font-style: italic;
-        }
+        .badge-bar { background: linear-gradient(135deg, var(--condor-dark), var(--condor-blue)); color: var(--white); text-align: center; padding: 18px 15px; border-bottom: 3px solid var(--condor-green); }
+        .badge-bar h2 { font-size: 1.6rem; text-transform: uppercase; letter-spacing: 1.5px; font-weight: 800; }
+        .badge-bar p { font-size: 1rem; margin-top: 4px; opacity: 0.9; font-style: italic; }
 
-        header {
-            background: var(--white);
-            padding: 1.5rem 1rem 1rem 1rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border-bottom: 2px solid #e0e0e0;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-        }
-        .logo-container {
-            text-align: center;
-            margin-bottom: 0.8rem;
-        }
-        .logo { 
-            max-height: 180px; 
-            width: auto; 
-            display: block;
-            margin: 0 auto;
-            transition: transform 0.3s ease;
-        }
-        .logo:hover { transform: scale(1.02); }
+        header { background: var(--white); padding: 0.5rem 1rem; border-bottom: 2px solid #e0e0e0; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 12px rgba(0,0,0,0.06); }
+        
+        .header-main { display: flex; align-items: center; justify-content: space-between; max-width: 1100px; margin: 0 auto; }
+        .logo { max-height: 80px; width: auto; transition: transform 0.3s ease; }
+        
+        .menu-toggle { display: none; background: none; border: none; font-size: 1.5rem; color: var(--condor-blue); cursor: pointer; padding: 10px; }
 
-        nav {
-            display: flex;
-            gap: 1rem;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            margin-top: 10px;
-        }
-        nav a {
-            color: var(--condor-blue);
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 0.95rem;
-            padding: 0.4rem 0.8rem;
-            border-radius: 6px;
-            transition: all 0.2s ease;
-        }
-        nav a:hover {
-            background-color: var(--sky-light);
-            color: var(--condor-green);
-        }
+        nav { display: flex; gap: 1rem; flex-wrap: wrap; justify-content: center; align-items: center; margin-top: 10px; }
+        nav a { color: var(--condor-blue); text-decoration: none; font-weight: 700; font-size: 0.95rem; padding: 0.4rem 0.8rem; border-radius: 6px; transition: all 0.2s ease; }
+        nav a:hover { background-color: var(--sky-light); color: var(--condor-green); }
 
-        .hero {
-            background: linear-gradient(rgba(13, 40, 79, 0.75), rgba(13, 40, 79, 0.75)), 
-                        url('images/aerea.jpg'); 
-            background-size: cover;
-            background-position: center;
-            color: var(--white);
-            padding: 5rem 1.5rem;
-            text-align: center;
-        }
+        .hero { background: linear-gradient(rgba(13, 40, 79, 0.75), rgba(13, 40, 79, 0.75)), url('images/aerea.jpg'); background-size: cover; background-position: center; color: var(--white); padding: 5rem 1.5rem; text-align: center; }
         .hero h1 { font-size: 3.2rem; margin-bottom: 1rem; text-shadow: 2px 2px 6px rgba(0,0,0,0.4); }
         .hero p { font-size: 1.3rem; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto; }
 
         .container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 3rem 1.5rem; }
-        section { margin-bottom: 4rem; scroll-margin-top: 250px; }
+        section { margin-bottom: 4rem; scroll-margin-top: 120px; }
         
-        h3 { 
-            color: var(--condor-blue); 
-            font-size: 2.1rem; 
-            margin-bottom: 1.5rem; 
-            border-left: 6px solid var(--condor-green); 
-            padding-left: 15px; 
-        }
+        h3 { color: var(--condor-blue); font-size: 2.1rem; margin-bottom: 1.5rem; border-left: 6px solid var(--condor-green); padding-left: 15px; }
 
         .grid { display: flex; flex-direction: column; gap: 2.5rem; }
-        
-        .img-box { 
-            width: 100%; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-        }
+        .img-box { width: 100%; border-radius: 12px; overflow: hidden; box-shadow: 0 6px 18px rgba(0,0,0,0.1); }
         .img-box img { width: 100%; height: auto; display: block; object-fit: cover; }
         .img-limit { max-height: 450px; }
 
-        .slider-container {
-            width: 100%;
-            height: 450px;
-            border-radius: 12px;
-            overflow: hidden;
-            position: relative;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-            background: #000;
-        }
+        .slider-container { width: 100%; height: 450px; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.15); background: #000; }
         #dynamic-slider { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease-in-out; opacity: 0; }
 
-        .btn-cta {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--whatsapp-green);
-            color: white;
-            padding: 1rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.05rem;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3);
-            transition: all 0.3s ease;
-        }
+        .btn-cta { display: inline-flex; align-items: center; justify-content: center; background: var(--whatsapp-green); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.3s ease; }
         .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45); }
         .btn-blue { background: var(--condor-blue); box-shadow: 0 4px 12px rgba(26, 74, 142, 0.3); }
         .btn-blue:hover { background: var(--condor-dark); }
 
-        .cta-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 1.5rem;
-            margin-top: 2rem;
-        }
-
-        .action-card {
-            background: var(--sky-light);
-            border: 2px solid #bce0fd;
-            border-radius: 12px;
-            padding: 2rem;
-            text-align: center;
-        }
+        .cta-grid { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; }
+        .action-card { background: var(--sky-light); border: 2px solid #bce0fd; border-radius: 12px; padding: 2rem; text-align: center; }
         .action-card h4 { color: var(--condor-blue); font-size: 1.4rem; margin-bottom: 0.8rem; }
 
-        .fleet-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 2rem;
-        }
-        .fleet-category {
-            background: var(--white);
-            padding: 2rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
-            border-top: 5px solid var(--condor-blue);
-        }
+        .fleet-container { display: grid; grid-template-columns: 1fr; gap: 2rem; }
+        .fleet-category { background: var(--white); padding: 2rem; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border-top: 5px solid var(--condor-blue); }
         .fleet-list { list-style: none; margin-top: 1rem; }
-        .fleet-list li {
-            padding: 0.8rem 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
-            font-weight: 600;
-        }
+        .fleet-list li { padding: 0.8rem 0; border-bottom: 1px solid #eee; display: flex; align-items: center; font-weight: 600; }
         .fleet-list li i { color: var(--condor-green); margin-right: 12px; }
 
         .map-container { width: 100%; height: 420px; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
         .map-container iframe { width: 100%; height: 100%; border: 0; }
 
-        .wsp-float {
-            position: fixed;
-            width: 65px;
-            height: 65px;
-            bottom: 25px;
-            right: 25px;
-            background-color: var(--whatsapp-green);
-            color: #FFF;
-            border-radius: 50px;
-            text-align: center;
-            font-size: 36px;
-            box-shadow: 2px 5px 15px rgba(0,0,0,0.3);
-            z-index: 2000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
+        .wsp-float { position: fixed; width: 65px; height: 65px; bottom: 25px; right: 25px; background-color: var(--whatsapp-green); color: #FFF; border-radius: 50px; text-align: center; font-size: 36px; box-shadow: 2px 5px 15px rgba(0,0,0,0.3); z-index: 2000; display: flex; align-items: center; justify-content: center; text-decoration: none; }
 
         footer { background: #111; color: #aaa; text-align: center; padding: 3rem 1rem; }
-        footer p { margin-bottom: 0.5rem; }
+
+        /* Estilos móviles ajustados */
+        @media (max-width: 767px) {
+            .menu-toggle { display: block; }
+            nav { display: none; flex-direction: column; width: 100%; padding: 1rem 0; border-top: 1px solid #eee; }
+            nav.active { display: flex; }
+            .badge-bar { padding: 10px; }
+            .badge-bar h2 { font-size: 1.1rem; }
+        }
 
         @media (min-width: 768px) {
             .grid { display: grid; grid-template-columns: 1fr 1fr; align-items: center; }
@@ -286,24 +148,25 @@
     </a>
 
     <header>
-        <div class="logo-container">
-            <a href="#inicio">
-                <img src="images/logo.png" alt="Club de Planeadores Cóndor" class="logo">
-            </a>
+        <div class="header-main">
+            <a href="#inicio"><img src="images/logo.png" alt="Club de Planeadores Cóndor" class="logo"></a>
+            <button class="menu-toggle" onclick="this.parentElement.nextElementSibling.nextElementSibling.classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <div class="badge-bar" style="width: 100%; z-index: 1001;">
+        <div class="badge-bar" style="width: 100%; margin-top: 10px;">
             <h2>92 Años de Trayectoria (1934 - 2026)</h2>
             <p>Una de las instituciones decanas del vuelo a vela en la República Argentina.</p>
         </div>
         <nav>
-            <a href="#inicio">Inicio</a>
-            <a href="#nosotros">Quienes Somos</a>
-            <a href="#historia">Historia</a>
-            <a href="#bautismos">Bautismos</a>
-            <a href="#escuela">Escuela de Vuelo</a>
-            <a href="#flota">Nuestra Flota</a>
-            <a href="#ubicacion">Ubicación</a>
-            <a href="#contacto">Contacto</a>
+            <a href="#inicio" onclick="this.parentElement.classList.remove('active')">Inicio</a>
+            <a href="#nosotros" onclick="this.parentElement.classList.remove('active')">Quienes Somos</a>
+            <a href="#historia" onclick="this.parentElement.classList.remove('active')">Historia</a>
+            <a href="#bautismos" onclick="this.parentElement.classList.remove('active')">Bautismos</a>
+            <a href="#escuela" onclick="this.parentElement.classList.remove('active')">Escuela de Vuelo</a>
+            <a href="#flota" onclick="this.parentElement.classList.remove('active')">Nuestra Flota</a>
+            <a href="#ubicacion" onclick="this.parentElement.classList.remove('active')">Ubicación</a>
+            <a href="#contacto" onclick="this.parentElement.classList.remove('active')">Contacto</a>
         </nav>
     </header>
 
@@ -318,7 +181,7 @@
     </section>
 
     <main class="container">
-
+        <!-- El resto del contenido original se mantiene idéntico -->
         <section id="nosotros">
             <h3>Quienes Somos</h3>
             <div class="grid">
@@ -333,17 +196,17 @@
             </div>
 
             <section id="compromiso" style="margin: 2rem auto; max-width: 900px;">
-    <div style="padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 2px solid var(--condor-green); box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15); text-align: center;">
-        <h3 style="color: var(--condor-green); margin-bottom: 1rem; border: none; padding: 0;">Tu vuelo tiene un propósito social</h3>
-        <p style="font-size: 1.1rem; color: #333; line-height: 1.7; text-align: center;">
-            El <strong>Club de Planeadores Cóndor</strong> es una asociación sin fines de lucro.
-            Al realizar un bautismo de vuelo con nosotros, <strong>no solo vivís una experiencia increíble: estás contribuyendo directamente</strong> con el mantenimiento de nuestra flota, la seguridad operativa y la formación de nuevos pilotos en nuestra región.
-        </p>
-        <div style="margin-top: 1.5rem; font-weight: bold; color: var(--condor-blue);">
-            <i class="fas fa-check-circle"></i> 100% de los fondos se reinvierten en la institución.
-        </div>
-    </div>
-</section>
+                <div style="padding: 2.5rem; background: #ffffff; border-radius: 16px; border: 2px solid var(--condor-green); box-shadow: 0 10px 30px rgba(46, 125, 50, 0.15); text-align: center;">
+                    <h3 style="color: var(--condor-green); margin-bottom: 1rem; border: none; padding: 0;">Tu vuelo tiene un propósito social</h3>
+                    <p style="font-size: 1.1rem; color: #333; line-height: 1.7; text-align: center;">
+                        El <strong>Club de Planeadores Cóndor</strong> es una asociación sin fines de lucro.
+                        Al realizar un bautismo de vuelo con nosotros, <strong>no solo vivís una experiencia increíble: estás contribuyendo directamente</strong> con el mantenimiento de nuestra flota, la seguridad operativa y la formación de nuevos pilotos en nuestra región.
+                    </p>
+                    <div style="margin-top: 1.5rem; font-weight: bold; color: var(--condor-blue);">
+                        <i class="fas fa-check-circle"></i> 100% de los fondos se reinvierten en la institución.
+                    </div>
+                </div>
+            </section>
 
             <div class="cta-grid">
                 <div class="action-card">
@@ -512,6 +375,5 @@
         }
         document.addEventListener('DOMContentLoaded', initSlider);
     </script>
-
 </body>
 </html>
