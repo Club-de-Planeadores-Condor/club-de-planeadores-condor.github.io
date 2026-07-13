@@ -99,7 +99,7 @@
         .img-limit { max-height: 450px; }
 
         .slider-container { width: 100%; height: 450px; border-radius: 12px; overflow: hidden; position: relative; box-shadow: 0 8px 25px rgba(0,0,0,0.15); background: #000; }
-        #dynamic-slider { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease-in-out; opacity: 0; }
+        .slider-container img { width: 100%; height: 100%; object-fit: cover; transition: opacity 0.8s ease-in-out; opacity: 0; }
 
         .btn-cta { display: inline-flex; align-items: center; justify-content: center; background: var(--whatsapp-green); color: white; padding: 1rem 2rem; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 1.05rem; box-shadow: 0 4px 12px rgba(37, 211, 102, 0.3); transition: all 0.3s ease; }
         .btn-cta:hover { transform: translateY(-3px); box-shadow: 0 6px 18px rgba(37, 211, 102, 0.45); }
@@ -181,7 +181,6 @@
     </section>
 
     <main class="container">
-        <!-- El resto del contenido original se mantiene idéntico -->
         <section id="nosotros">
             <h3>Quienes Somos</h3>
             <div class="grid">
@@ -234,12 +233,17 @@
 
         <section id="historia">
             <h3>Nuestra Historia</h3>
-            <div style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--condor-green);">
-                <p>El <strong>Club de Planeadores Cóndor</strong> fue fundado formalmente el <strong>3 de diciembre de 1934</strong> en Comodoro Rivadavia (Chubut) por empleados de las empresas petroleras de la zona. Sus antecedentes se remontan a 1931, cuando entusiastas apoyados por los pilotos de la célebre <em>Aeroposta Argentina</em> armaron un planeador Kassel 12 para experimentar los vuelos sin motor en la Patagonia. Durante esa etapa, pioneros célebres como <strong>Antoine de Saint-Exupéry</strong>, Jean Mermoz y Próspero Palazzo desafiaron los vientos patagónicos en planeador.</p>
-                <br>
-                <p>A fines de la década del 30', el club se trasladó a Buenos Aires, operando inicialmente en José León Suárez y luego en el Aeródromo de Merlo desde 1949. Finalmente, en 1974, la institución se radicó de forma definitiva en el <strong>Aeródromo de Zárate</strong>, inaugurando en 1976 su hangar propio.</p>
-                <br>
-                <p>Por nuestra Escuela de Vuelo pasaron más de 15 instructores destacados, entre ellos <strong>Rolf Hossinger</strong> (histórico Comandante de Aerolíneas Argentinas y Campeón Mundial de Vuelo a Vela en 1960). Hoy en día, el club continúa formando pilotos comerciales, deportivos y remolcadores que alimentan el sistema aeronáutico argentino.</p>
+            <div class="grid">
+                <div style="background: var(--white); padding: 2.5rem; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-left: 5px solid var(--condor-green);">
+                    <p>El <strong>Club de Planeadores Cóndor</strong> fue fundado formalmente el <strong>3 de diciembre de 1934</strong> en Comodoro Rivadavia (Chubut) por empleados de las empresas petroleras de la zona. Sus antecedentes se remontan a 1931, cuando entusiastas apoyados por los pilotos de la célebre <em>Aeroposta Argentina</em> armaron un planeador Kassel 12 para experimentar los vuelos sin motor en la Patagonia. Durante esa etapa, pioneros célebres como <strong>Antoine de Saint-Exupéry</strong>, Jean Mermoz y Próspero Palazzo desafiaron los vientos patagónicos en planeador.</p>
+                    <br>
+                    <p>A fines de la década del 30', el club se trasladó a Buenos Aires, operando inicialmente en José León Suárez y luego en el Aeródromo de Merlo desde 1949. Finalmente, en 1974, la institución se radicó de forma definitiva en el <strong>Aeródromo de Zárate</strong>, inaugurando en 1976 su hangar propio.</p>
+                    <br>
+                    <p>Por nuestra Escuela de Vuelo pasaron más de 15 instructores destacados, entre ellos <strong>Rolf Hossinger</strong> (histórico Comandante de Aerolíneas Argentinas y Campeón Mundial de Vuelo a Vela en 1960). Hoy en día, el club continúa formando pilotos comerciales, deportivos y remolcadores que alimentan el sistema aeronáutico argentino.</p>
+                </div>
+                <div class="slider-container" style="height: 100%; min-height: 400px;">
+                    <img id="history-slider" src="images/history/1.jpg" alt="Fotos históricas del Club de Planeadores Cóndor">
+                </div>
             </div>
         </section>
 
@@ -345,35 +349,42 @@
     </footer>
 
     <script>
-        async function initSlider() {
-            const sliderImg = document.getElementById('dynamic-slider');
-            try {
-                const response = await fetch('images/inventory.json');
-                if (!response.ok) throw new Error("Inventory not found");
-                let files = await response.json();
-                
-                const firstImg = 'planeadores-muchos.jpg';
-                if (files.includes(firstImg)) {
-                    files = [firstImg, ...files.filter(f => f !== firstImg)];
-                }
+        function createCarousel(elementId, jsonPath, defaultImg) {
+            const sliderImg = document.getElementById(elementId);
+            if (!sliderImg) return;
 
-                let index = 0;
-                const rotate = () => {
-                    sliderImg.style.opacity = 0;
-                    setTimeout(() => {
-                        sliderImg.src = `images/${files[index]}`;
-                        sliderImg.onload = () => { sliderImg.style.opacity = 1; };
-                        index = (index + 1) % files.length;
-                    }, 600);
-                };
-                rotate();
-                setInterval(rotate, 4500);
-            } catch (e) {
-                sliderImg.src = 'images/planeadores-muchos.jpg';
-                sliderImg.style.opacity = 1;
-            }
+            fetch(jsonPath)
+                .then(res => {
+                    if (!res.ok) throw new Error("File not found");
+                    return res.json();
+                })
+                .then(files => {
+                    if (!Array.isArray(files) || files.length === 0) return;
+                    
+                    let index = 0;
+                    const rotate = () => {
+                        sliderImg.style.opacity = 0;
+                        setTimeout(() => {
+                            sliderImg.src = `images/${files[index]}`;
+                            sliderImg.onload = () => { sliderImg.style.opacity = 1; };
+                            index = (index + 1) % files.length;
+                        }, 600);
+                    };
+                    rotate();
+                    setInterval(rotate, 4500);
+                })
+                .catch(() => {
+                    sliderImg.src = `images/${defaultImg}`;
+                    sliderImg.style.opacity = 1;
+                });
         }
-        document.addEventListener('DOMContentLoaded', initSlider);
+
+        document.addEventListener('DOMContentLoaded', () => {
+            // Carrusel de la Sección Historia
+            createCarousel('history-slider', 'images/inventory-history.json', 'history/1.jpg');
+            // Carrusel de la Galería Principal
+            createCarousel('dynamic-slider', 'images/inventory.json', 'planeadores-muchos.jpg');
+        });
     </script>
 </body>
 </html>
